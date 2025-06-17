@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000/api";
+const API_URL = "https://digital-sign.onrender.com/api";
 // User Authentication
 export const registerUser = async (userData) => {
   console.log(userData);
