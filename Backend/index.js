@@ -8,7 +8,18 @@ dotenv.config();
 
 const app = express();
 
-app.use(cors());
+const allowedOrigins = [
+  "http://localhost:3000",
+  "https://digital-sign-1.onrender.com",
+];
+
+app.use(
+  cors({
+    origin: allowedOrigins,
+    credentials: true,
+  }),
+);
+
 app.use(express.json({ limit: "50mb" }));
 mongoose
   .connect(process.env.MONGO_URI)
