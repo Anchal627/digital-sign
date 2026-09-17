@@ -1,4 +1,4 @@
-const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000/api";
+const API_URL = "https://digital-sign.onrender.com/api";
 
 export const registerUser = async (userData) => {
   console.log("Register data:", userData);
